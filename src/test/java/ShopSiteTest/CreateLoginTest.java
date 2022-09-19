@@ -17,15 +17,15 @@ public class CreateLoginTest extends SharedData {
        MyAccountTab.click();
 
         WebElement UserNameElement = driver.findElement(By.cssSelector("input[id='reg_username']"));
-        String UserNameValue ="WarioLupin";
+        String UserNameValue ="WarioAcasa1";
         UserNameElement.sendKeys(UserNameValue);
 
         WebElement EmailAddressElement = driver.findElement(By.cssSelector("input[id='reg_email']"));
-        String  EmailAddressValue ="vash@yahoo.co";
+        String  EmailAddressValue ="acasa24@yahoo.com";
         EmailAddressElement .sendKeys( EmailAddressValue);
 
         WebElement PasswordElement = driver.findElement(By.cssSelector("input[id='reg_password']"));
-        String PasswordValue ="parolamarePAROLAMARE@123456";
+        String PasswordValue ="Harapalb1";
         PasswordElement .sendKeys(PasswordValue);
 
         WebElement RegisterButton= driver.findElement(By.cssSelector("button[name='register']"));
@@ -34,12 +34,18 @@ public class CreateLoginTest extends SharedData {
         driver.navigate().to("https://shop.demoqa.com/shop-demoqa?redirect_to=https%3A%2F%2Fshop.demoqa.com%3A443%2Fmy-account%2F&aiowps_login_msg_id=session_expired\n");
 
        WebElement EmailAddressAccountElement = driver.findElement(By.id("user_login"));
-        String  EmailAddressAccountValue ="vash@yahoo.co";
+        String  EmailAddressAccountValue ="acasa24@yahoo.com";
         EmailAddressAccountElement.sendKeys( EmailAddressAccountValue);
 
         WebElement PasswordAccountElement = driver.findElement(By.id("user_pass"));
-        String PasswordAccountValue ="parolamarePAROLAMARE@123456";
+        String PasswordAccountValue ="Harapalb1";
         PasswordAccountElement.sendKeys(PasswordAccountValue);
+
+        WebElement RememberMeCheckBox = driver.findElement(By.id("rememberme"));
+        RememberMeCheckBox.click();
+
+        WebElement LogInButton = driver.findElement(By.id("wp-submit"));
+        LogInButton.click();
 
 
 
